@@ -57,6 +57,10 @@ int check_rb_tree(const rb_tree_t *tree, size_t black_count);
 int colour_fail(const rb_tree_t *cur);
 int key_fail(const rb_tree_t *cur);
 rb_tree_t *rb_tree_insert(rb_tree_t **tree, int value);
+rb_tree_t *repair_luncle(rb_tree_t **tree, rb_tree_t *node);
+rb_tree_t *repair_runcle(rb_tree_t **tree, rb_tree_t *node);
+void repair_rb(rb_tree_t **tree, rb_tree_t *node);
+rb_tree_t *insert_rb(rb_tree_t **tree, int value);
 rb_tree_t *array_to_rb_tree(int *array, size_t size);
 rb_tree_t *rb_tree_remove(rb_tree_t *root, int n);
 
