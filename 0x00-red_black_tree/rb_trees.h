@@ -64,4 +64,18 @@ rb_tree_t *insert_rb(rb_tree_t **tree, int value);
 rb_tree_t *array_to_rb_tree(int *array, size_t size);
 rb_tree_t *rb_tree_remove(rb_tree_t *root, int n);
 
+
+
+void min_transplant(rb_tree_t **root, rb_tree_t *rm_node,
+		rb_tree_t *rm_node_cpy, int *rm_node_cpy_color,
+		    rb_tree_t *node, rb_tree_t **node_parent);
+rb_tree_t *rb_transplant(rb_tree_t *root, rb_tree_t *tar, rb_tree_t *src);
+void rb_rm_repair(rb_tree_t **root, rb_tree_t *node, rb_tree_t *node_parent);
+rb_tree_t *repair_rsibling(rb_tree_t **root, rb_tree_t *node,
+			   rb_tree_t *node_parent);
+rb_tree_t *repair_lsibling(rb_tree_t **root, rb_tree_t *node,
+			   rb_tree_t *node_parent);
+
+
+
 #endif
